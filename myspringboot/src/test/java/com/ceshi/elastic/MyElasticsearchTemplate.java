@@ -109,7 +109,7 @@ public class MyElasticsearchTemplate{
 	 * 用template添加
 	 * 问题：如果index、type相同，不设置id，那么elasticsearch会自动生成id值。但是，会覆盖掉已经存在的数据。
 	 */
-	@Test
+//	@Test
 	public void addIndex2(){
 		System.out.println("----------开始添加索引----------------");
 		Car u=new Car();
@@ -163,10 +163,10 @@ public class MyElasticsearchTemplate{
 	/**
 	 * 模糊查询---排序---分页
 	 */
-//	@Test
+	@Test
 	public void getUserOrder2(){
 		Map<String, Object> query=new HashMap<String, Object>();
-		query.put("name", "老");
+//		query.put("name", "老大");
 //		query.put("tel", "23");
 		query.put("password", "33");
 		SearchQuery searchQuery=convertSearchQuery(query);

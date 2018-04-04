@@ -9,5 +9,6 @@ public class Start {
 	public static void main(String[] args) {
         // http://localhost:8080/
         SpringApplication.run(Start.class, args);
+        System.out.println();
     }
 }

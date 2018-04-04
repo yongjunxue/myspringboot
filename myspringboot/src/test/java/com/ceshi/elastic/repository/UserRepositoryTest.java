@@ -24,7 +24,7 @@ public class UserRepositoryTest {
 		 User u=new User();
 		 u.setAge(50);
 		 u.setMoney(5000);
-		 u.setName("王志");
+		 u.setName("王志2");
 		 u.setPassword("12345");
 //		 u.setTel("");
 		 userRepository.save(u);
