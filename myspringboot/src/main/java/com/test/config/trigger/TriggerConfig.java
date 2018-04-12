@@ -11,21 +11,21 @@ import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
 public class TriggerConfig {
-	@Bean(name = "schedulerFactoryBean")
-	@Qualifier("schedulerFactoryBean")
-	public SchedulerFactoryBean getSchedulerFactoryBean() {
-		return new SchedulerFactoryBean();
-	}
-	
-	@Bean(name = "methodInvokingJobDetailFactoryBean")
-	@Qualifier("methodInvokingJobDetailFactoryBean")
-	public MethodInvokingJobDetailFactoryBean getMethodInvokingJobDetailFactoryBean() {
-		return new MethodInvokingJobDetailFactoryBean();
-	}
-	@Bean(name = "cronTriggerFactoryBean")
-	@Qualifier("cronTriggerFactoryBean")
-	public CronTriggerFactoryBean getCronTriggerFactoryBean() {
-		return new CronTriggerFactoryBean();
-	}
+//	@Bean(name = "schedulerFactoryBean")
+//	@Qualifier("schedulerFactoryBean")
+//	public SchedulerFactoryBean getSchedulerFactoryBean() {
+//		return new SchedulerFactoryBean();
+//	}
+//	
+//	@Bean(name = "methodInvokingJobDetailFactoryBean")
+//	@Qualifier("methodInvokingJobDetailFactoryBean")
+//	public MethodInvokingJobDetailFactoryBean getMethodInvokingJobDetailFactoryBean() {
+//		return new MethodInvokingJobDetailFactoryBean();
+//	}
+//	@Bean(name = "cronTriggerFactoryBean")
+//	@Qualifier("cronTriggerFactoryBean")
+//	public CronTriggerFactoryBean getCronTriggerFactoryBean() {
+//		return new CronTriggerFactoryBean();
+//	}
 	
 }

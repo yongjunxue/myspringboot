@@ -35,20 +35,20 @@ public class TestRedisTemplage {
 	}
 	@Test
 	public void get(){
-		String o=template.opsForValue().get("mykey");
-		System.out.println(o);
-		
-//		String mylist=template.opsForList().rightPop("mylist");
-//		System.out.println(mylist);
-		
-		
-		Long size=template.opsForList().size("mylist");
-		List<String> list=template.opsForList().range("mylist", 0, -1);
-		list.forEach(e -> System.out.println(e));
-		System.out.println(list.toString());
-		System.out.println(template.opsForList().range("mylist", size-3, size-1));
-		
-		System.out.println(template.opsForHash().size("map"));
+//		String o=template.opsForValue().get("mykey");
+//		System.out.println(o);
+//		
+////		String mylist=template.opsForList().rightPop("mylist");
+////		System.out.println(mylist);
+//		
+//		
+//		Long size=template.opsForList().size("mylist");
+//		List<String> list=template.opsForList().range("mylist", 0, -1);
+//		list.forEach(e -> System.out.println(e));
+//		System.out.println(list.toString());
+//		System.out.println(template.opsForList().range("mylist", size-3, size-1));
+//		
+//		System.out.println(template.opsForHash().size("map"));
 		
 	}
 }

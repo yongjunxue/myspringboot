@@ -4,7 +4,6 @@ import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.Message;
-import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
@@ -12,24 +11,26 @@ import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.stereotype.Service;
 
 /**
- * 
+ * 不实现MessageListener收不到消息。具体请参考MySub
  * @author xueyongjun
  *
  */
 
 @Service
-public class MySub implements MessageListener{
-	private static final Logger logger = Logger.getLogger(MySub.class.getName());
-	public MySub(){
+public class MySub2{
+	private static final Logger logger = Logger.getLogger(MySub2.class.getName());
+//	@Autowired
+//	RedisMessageListenerContainer lis;
+	@Autowired
+	RedisTemplate<String,String> template;
+	public MySub2(){
+//		lis.addMessageListener(new MessageListenerAdapter(this,"onMessage"), new ChannelTopic("redis_publish"));
 	}
-	@Override
-	public void onMessage(Message message, byte[] pattern) {
-		
-		byte[] body=message.getBody();
-		byte[] channel=message.getChannel();
-		System.out.println("消息体:"+new String(body));
-		System.out.println("频道："+new String(channel));
-		System.out.println(message.toString());
+	public void onMessage(String msg){
+		System.out.println("MySub2:"+msg);
+	}
+	public void print(){
+		System.out.println("MySub2.print:");
 	}
 	
 }

@@ -24,7 +24,7 @@ public class TestPubSub {
 	@Test
 	public void send(){
 		
-		pub.send("myAPP","发消息了");
+		pub.send("redis_publish","发消息了");
 		
 	}
 }
