@@ -12,8 +12,8 @@ import com.test.Start;
 import com.test.pojo.elastic.User;
 import com.test.repositoty.elastic.UserRepository;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes=Start.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringBootTest(classes=Start.class)
 public class UserRepositoryTest {
 	
 	 @Autowired  

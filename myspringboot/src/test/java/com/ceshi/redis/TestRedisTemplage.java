@@ -1,5 +1,6 @@
 package com.ceshi.redis;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
@@ -50,5 +51,11 @@ public class TestRedisTemplage {
 //		
 //		System.out.println(template.opsForHash().size("map"));
 		
+		System.currentTimeMillis();
+		
+	}
+	public static void main(String[] args) {
+		System.out.println(new Date(System.currentTimeMillis()));
+		System.out.println(new Date());
 	}
 }
